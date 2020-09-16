@@ -1,0 +1,324 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px;
+  font-family: Rubik, sans-serif;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--color-app-background);
+}
+.top-shape {
+  position: absolute;
+  top: 0;
+  left: -0px;
+  height: 700px;
+}
+.bottom-shape {
+  position: absolute;
+  bottom: 0;
+  right: -30px;
+  height: 700px;
+  transform: rotate(180deg);
+}
+
+.attribution {
+  position: sticky;
+  bottom: 0;
+}
+
+/*-----VARIABLES--------*/
+/*-----text--------*/
+:root {
+  --color-text-sub-heading: hsl(276, 100%, 81%);
+  --color-text-chat-left: hsl(276, 55%, 52%);
+  --color-text-placeholder: hsl(206, 6%, 79%);
+  --color-text-main-heading: hsl(206, 6%, 79%);
+  --color-text-p: hsl(270, 7%, 64%);
+}
+/*-----gradients and colors--------*/
+:root {
+  --gradient-light-magenta: hsl(293, 100%, 63%);
+  --gradient-light-violet: hsl(264, 100%, 61%);
+}
+
+:root {
+  --color-app-background: hsl(270, 20%, 96%);
+  --color-btn-background: hsl(271, 36%, 24%);
+  --color-radio-btn-outline: hsl(289, 100%, 72%);
+}
+
+/*-----MAIN--------*/
+.container {
+  width: 80%;
+  max-width: 750px;
+  display: flex;
+  z-index: 1;
+  justify-content: flex-start;
+  justify-items: flex-start;
+}
+/*--CONTAINERS---*/
+
+.container__right {
+  align-self: center;
+  max-width: 450px;
+  flex: 1;
+  margin-left: 10px;
+}
+.container__right h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--color-btn-background);
+  font-weight: 700;
+}
+.container__right p {
+  color: var(--color-text-p);
+  line-height: 25px;
+}
+
+.container__left {
+  flex: 0.7;
+}
+
+/*-----IPHONE SHAPE--------*/
+
+.iphone__shape {
+  height: 500px;
+  min-width: 250px;
+  max-width: 250px;
+  background-color: white;
+  border: 10px solid white;
+  content: "";
+  border-radius: 30px;
+  box-shadow: 10px 10px 55px -2px rgba(235, 232, 235, 1);
+  background-color: var(--color-app-background);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/*-----IPHONE SHAPE-HEADER--------*/
+
+.iphone__shape-header {
+  display: flex;
+  padding: 30px 10px 10px 10px;
+  align-items: center;
+  background: rgb(141, 59, 254);
+  background: linear-gradient(
+    270deg,
+    rgba(222, 66, 255, 1) 0%,
+    rgba(141, 59, 254, 1) 100%
+  );
+  border-radius: 25px 25px 5px 5px;
+  color: white;
+  margin-bottom: 10px;
+}
+.iphone__shape-avatar {
+  align-items: center;
+}
+
+.iphone__shape-header img {
+  width: 25px;
+  object-fit: contain;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.iphone__shape-header-name {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.iphone__shape-header-name h3 {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.iphone__shape-header-name small {
+  font-size: 0.5rem;
+  font-weight: 400;
+  color: white;
+}
+
+/*-----IPHONE SHAPE-MESSAGES--------*/
+.iphone__shape-message {
+  margin: 5px 10px;
+  max-width: 125px;
+  padding: 7px;
+  line-height: 8px;
+  width: fit-content;
+}
+.iphone__shape-message small {
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.iphone__shape-message-left {
+  color: var(--color-text-chat-left);
+  background-color: #f1e2fb;
+  border-radius: 10px 10px 10px 5px;
+}
+
+.iphone__shape-message-right {
+  color: var(--color-text-p);
+  background-color: #fff;
+  border-radius: 10px 10px 5px 10px;
+  align-self: flex-end;
+}
+.iphone__shape-message-pics {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 5px;
+}
+.iphone__shape-message-pics img {
+  display: flex;
+  width: 40px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.iphone__shape-message-radio {
+  margin: 5px 10px;
+  max-width: 160px;
+  padding: 7px;
+  line-height: 8px;
+  display: flex;
+  background: rgb(141, 59, 254);
+  background: linear-gradient(
+    270deg,
+    rgba(141, 59, 254, 1) 0%,
+    rgba(222, 66, 255, 1) 100%
+  );
+  font-size: 8px;
+  align-items: center;
+  border-radius: 10px 10px 10px 5px;
+}
+.radio__btn {
+  width: 10px;
+  height: 10px;
+  content: "";
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.iphone__shape-message-radio span {
+  font-size: 8px;
+}
+.iphone__shape-message-radio-text {
+  flex: 1;
+  color: white;
+}
+.iphone__shape-message-radio-price {
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+}
+
+/*--IPHONE TYPE SECTION---*/
+.iphone__shape-type {
+  width: 95%;
+  height: 35px;
+  align-self: center;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 20px;
+  display: flex;
+  padding: 5px;
+  align-content: center;
+  align-items: center;
+}
+
+.iphone__shape-type-placeholder {
+  font-size: 9px;
+  color: var(--color-text-placeholder);
+  flex: 1;
+  margin-left: 5px;
+}
+.iphone__shape-type-send {
+  background-color: var(--color-btn-background);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.iphone__notch {
+  height: 20px;
+  min-width: 130px;
+  background-color: white;
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 10px 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .top-shape,
+  .bottom-shape {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .top-shape,
+  .bottom-shape {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .container__right {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container__right {
+    margin-left: 40px;
+  }
+  .container__right h1 {
+    font-size: 28px;
+  }
+  .container__right p {
+    font-size: 14px;
+  }
+  .top-shape,
+  .bottom-shape {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 550px) {
+  body {
+    overflow-x: hidden;
+  }
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  .container__right,
+  .container__left {
+    margin: 40px auto;
+  }
+  .container__right {
+    text-align: center;
+  }
+  .bottom-shape {
+    right: 10px;
+  }
+  .container__right p {
+    font-size: 16px;
+  }
+}
