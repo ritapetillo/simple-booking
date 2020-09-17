@@ -182,6 +182,7 @@ body {
   display: flex;
   align-self: flex-end;
   margin-right: 5px;
+  justify-content: center;
 }
 .iphone__shape-message-pics img {
   display: flex;
@@ -301,7 +302,6 @@ body {
   }
 }
 @media screen and (max-width: 550px) {
- 
   .container {
     flex-direction: column;
     justify-content: center;
